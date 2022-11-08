@@ -5,7 +5,15 @@ Console.WriteLine("Введите положительное число m");
 int m = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите положительное число n");
 int n = int.Parse(Console.ReadLine());
-Console.Write($"Функция Аккермана равна: {AkkermanFunction(m, n)}");
+if (m<0 || n<0)
+{
+    Console.WriteLine("Введено отрицательное число. Повторите ввод");
+}
+else
+{
+    Console.Write($"Функция Аккермана равна: {AkkermanFunction(m, n)}");
+}
+
 
 // функция Аккермана
 int AkkermanFunction(int m, int n)
