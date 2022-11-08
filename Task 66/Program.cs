@@ -23,10 +23,10 @@ int n = int.Parse(Console.ReadLine());
 #region Сумма элементов от M до N c помощью рекурсии
 int SumFromMToN(int m, int n)
 {
-    if (m==n)
+    if (m == n)
     {
         return m;
     }
-    return m + SumFromMToN(m+1, n);
+    return m + SumFromMToN(m + 1, n);
 }
 #endregion
