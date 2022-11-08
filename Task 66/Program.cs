@@ -20,14 +20,13 @@ int n = int.Parse(Console.ReadLine());
         Console.WriteLine($"Сумма элементов от {n} до {m} равна:{SumFromMToN(n, m)}");
     }
 
-#region Сумма элементов от M до N
+#region Сумма элементов от M до N c помощью рекурсии
 int SumFromMToN(int m, int n)
 {
-    int SumNum = 0;
-    for (int i = m; i <= n; i++)
+    if (m==n)
     {
-        SumNum += i;
+        return m;
     }
-    return SumNum;
+    return m + SumFromMToN(m+1, n);
 }
 #endregion
